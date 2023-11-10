@@ -27,7 +27,7 @@ const weatherIcon = {
   "03": {
     textColor: "text-gray-400",
     icon: <BsCloudy size={120} />,
-    text: "구름 꼈네요",
+    text: "구름 조금 꼈네요",
   },
   "04": {
     textColor: "text-gray-800",
@@ -42,7 +42,7 @@ const weatherIcon = {
   10: {
     textColor: "text-blue-600",
     icon: <BsCloudRainHeavy size={120} />,
-    text: "비 많이 와용",
+    text: "비 와요 우산 챙기세요!",
   },
   11: {
     textColor: "text-black",
@@ -77,7 +77,7 @@ const App = () => {
 
   const getWeather = async () => {
     const response = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=f9cd232dbbb4ca1f4cf80eb8468af216&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${process.env.REACT_APP_WEATHER_KEY}&units=metric`
     );
     setWeatherData(response.data);
     console.log(response.data, "Hello");
