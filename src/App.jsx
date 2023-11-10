@@ -104,7 +104,14 @@ const App = () => {
             weatherIcon[weatherData.weather[0].icon.substring(0, 2)].textColor
           }`}
         >
-          {weatherIcon[weatherData.weather[0].icon.substring(0, 2)].icon}
+          <div className="flex">
+            {" "}
+            {weatherIcon[weatherData.weather[0].icon.substring(0, 2)].icon}
+            {weatherIcon[weatherData.weather[0].icon.substring(0, 2)].icon}
+            {weatherIcon[weatherData.weather[0].icon.substring(0, 2)].icon}
+            {weatherIcon[weatherData.weather[0].icon.substring(0, 2)].icon}
+            {weatherIcon[weatherData.weather[0].icon.substring(0, 2)].icon}
+          </div>
 
           <div>{weatherData.name},</div>
           <span>
